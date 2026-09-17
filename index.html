@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,54 +8,172 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <nav class="nav"><a href="https://andrewjnguyen21.github.io/">Andrew Nguyen</a></nav>
 
   <main>
     <header class="hero">
-      <p class="eyebrow">FREE Lab · University of Michigan · Robotics</p>
       <h1>A High-Payload Wall-Climbing Robot Using Passive Bistable Suction Cups</h1>
-      <p class="subtitle">A high-payload wall-climbing robot using passive bistable suction cups.</p>
-      <p class="authors"><a href="https://andrewjnguyen21.github.io/">Andrew Nguyen</a>, Mingyuan Li, <a href="https://danielbruder.com/">Daniel Bruder</a>, Member, IEEE</p>
-      <p class="affiliation"><a href="https://www.freelaboratory.org/">FREE Lab</a> · Mechanical Engineering · University of Michigan</p>
-      <p class="venue">2026 IEEE International Conference on Robotics &amp; Automation (ICRA)</p>
+      <p class="subtitle">2026 IEEE International Conference on Robotics &amp; Automation (ICRA)</p>
+      <p class="authors"><a href="https://andrewjnguyen21.github.io/">Andrew Nguyen<sup>1</sup></a>, Mingyuan
+        Li<sup>1</sup>, <a href="https://danielbruder.com/">Daniel Bruder<sup>1</sup></a></p>
+      <p class="affiliation"><sup>1</sup> <a href="https://www.freelaboratory.org/">FREE Lab</a> · Mechanical
+        Engineering · University of Michigan</p>
       <div class="buttons">
-        <a class="button" href="#downloads">Paper</a>
-        <a class="button" href="#results">Video</a>
+        <a class="button" href="#citation"><span class="button-icon" aria-hidden="true">▣</span> Paper</a>
+        <a class="button" href="https://www.youtube.com/watch?v=xeWG5IHMbxI"><span class="button-icon"
+            aria-hidden="true">▶</span> Video</a>
       </div>
     </header>
 
-    <section class="callout"><strong>TL;DR:</strong> Passive bistable suction cups generate strong adhesion without continuous power or large application forces. A tracked robot automatically engages and disengages the cups, climbs smooth surfaces in multiple orientations, and carries an additional 7.940 kg payload at a 2.25 payload-to-weight ratio.</section>
+    <section class="callout"><strong>TL;DR:</strong> Passive bistable suction cups generate strong adhesion without
+      continuous power or large application forces. A tracked robot automatically engages and disengages the cups,
+      climbs smooth surfaces in multiple orientations, and can carry an additional 7.940 kg payload at a 2.25
+      payload-to-weight ratio.</section>
 
-    <section>
-      <h2>Project overview</h2>
-      <p>Wall-climbing robots could automate hazardous tasks such as window washing, inspection, maintenance, and construction, but conventional systems trade payload capacity against energy use and adhesion force. This work introduces a track-based robot with custom passive bistable suction cups. Each cup has engaged and disengaged stable configurations: a small snap-through motion creates the pressure difference needed for adhesion, while the tread system handles engagement, seal breaking, and reset during each revolution. The result is an energy-efficient climbing platform that does not require continuous power to remain attached.</p>
+    <section class="abstract-section">
+      <h2>Abstract</h2>
+      <p>Wall-climbing robots could automate hazardous tasks such as window washing, inspection, maintenance, and
+        construction, but conventional systems trade payload capacity against energy use and adhesion force. This work
+        introduces a track-based robot with custom passive bistable suction cups. Each cup has engaged and disengaged
+        stable configurations: a small snap-through motion creates the pressure difference needed for adhesion, while
+        the tread system handles engagement, seal breaking, and reset during each revolution. The result is an
+        energy-efficient climbing platform that does not require continuous power to remain attached.</p>
     </section>
 
     <section id="results">
-      <h2>Results</h2>
+      <h2>1. Suction Cup & Robot Design</h2>
+      <div class="grid design-grid">
+        <!-- Optional segment controls: add data-start="5" data-end="18" to a video, in seconds. -->
+        <article class="card"><video class="media-video" autoplay controls muted loop playsinline preload="metadata">
+            <source src="media/bistable-flip-1-end.mp4">Your browser does not support embedded video.
+          </video>
+          <h3>Suction Cup</h3>
+        </article>
+        <article class="card"><video class="media-video" autoplay controls muted loop playsinline preload="metadata">
+            <source src="media/Full%20cycle%20with%207%20cups.MOV">Your browser does not support embedded video.
+          </video>
+          <h3>Robot Design</h3>
+        </article>
+      </div>
+      <h2>2. Climbing on different surfaces</h2>
+      <p>The robot climbs across a range of doors, walls, and other smooth or textured surfaces using passive bistable
+        suction-cup adhesion.</p>
+      <div class="grid surface-grid">
+        <article class="card"><video class="media-video" autoplay controls muted loop playsinline preload="metadata">
+            <source src="media/wood-door-5-14.mp4">Your browser does not support embedded video.
+          </video>
+          <h3>Wood door</h3>
+        </article>
+        <article class="card"><video class="media-video" autoplay controls muted loop playsinline preload="metadata">
+            <source src="media/painted-wall-5-14.mp4">Your browser does not support embedded video.
+          </video>
+          <h3>Painted wall</h3>
+        </article>
+        <article class="card"><video class="media-video" autoplay controls muted loop playsinline preload="metadata">
+            <source src="media/steel-door-4-end.mp4">Your browser does not support embedded video.
+          </video>
+          <h3>Steel door</h3>
+        </article>
+        <article class="card"><video class="media-video" autoplay controls muted loop playsinline preload="metadata">
+            <source src="media/glass-wall-7-30.mp4">Your browser does not support embedded video.
+          </video>
+          <h3>Glass wall</h3>
+        </article>
+      </div>
+      <h2>3. Climbing results</h2>
+      <p>These demonstrations show climbing on whiteboards, inverted surfaces, and while carrying additional
+        payload.</p>
       <div class="grid">
-        <article class="card"><video class="media-video" controls autoplay muted playsinline preload="metadata"><source src="media/wall-climbing-overview.mp4" type="video/mp4">Your browser does not support embedded video.</video><h3>Multi-surface climbing</h3><p>The ICRA video overview shows the robot climbing on smooth surfaces in vertical, sideways, and inverted orientations.</p></article>
-        <article class="card"><video class="media-video" controls autoplay muted playsinline preload="metadata"><source src="media/bistable-flip.mov" type="video/quicktime">Your browser does not support embedded video.</video><h3>Passive bistable adhesion</h3><p>The bistable-flip clip shows the cup switching between its engaged and disengaged configurations without continuous adhesion power.</p></article>
-        <article class="card"><video class="media-video" controls autoplay muted playsinline preload="metadata"><source src="media/distance-climb.mov" type="video/quicktime">Your browser does not support embedded video.</video><h3>Climbing performance</h3><p>The distance-climb clip gives a first look at locomotion performance; payload and endurance results are summarized above.</p></article>
+        <article class="card whiteboard-card"><div class="whiteboard-frame"><video class="media-video whiteboard-video" autoplay controls muted loop playsinline preload="metadata">
+            <source src="media/free-lab-whiteboard-cropped.mp4">Your browser does not support embedded video.
+          </video></div>
+          <h3>Cleaning whiteboard</h3>
+        </article>
+        <!-- <article class="card"><video class="media-video" autoplay controls muted loop playsinline preload="metadata">
+            <source src="media/Michigan%20Whiteboard.mov">Your browser does not support embedded video.
+          </video>
+          <h3>Michigan whiteboard</h3>
+          <p>Climbing demonstration on a second whiteboard surface.</p>
+        </article> -->
+        <article class="card"><video class="media-video" autoplay controls muted loop playsinline preload="metadata">
+            <source src="media/upside-down-3-9.mp4">Your browser does not support embedded video.
+          </video>
+          <h3>Upside-down climbing</h3>
+        </article>
+        <article class="card"><video class="media-video" autoplay controls muted loop playsinline preload="metadata">
+            <source src="media/17_5_lbs-3-22.mp4">Your browser does not support embedded video.
+          </video>
+          <h3>Payload capacity (7.940kg)</h3>
+        </article>
+        <article class="card"><video class="media-video" autoplay controls muted loop playsinline preload="metadata">
+            <source src="media/top-to-bottom-28-33.mp4">Your browser does not support embedded video.
+          </video>
+          <h3>Top-to-bottom climbing</h3>
+        </article>
       </div>
     </section>
 
-    <section id="downloads">
-      <h2>Downloads</h2>
-      <p><strong>Paper:</strong> <em>A High-Payload Wall-Climbing Robot Using Passive Bistable Suction Cups.</em> Add the paper PDF, supplementary video, CAD files, and experimental data to this repository as they become available.</p>
-    </section>
 
-    <section>
+    <section id="citation">
       <h2>Citation</h2>
-      <pre>@inproceedings{nguyen2026highpayload,
-  title  = {A High-Payload Wall-Climbing Robot Using Passive Bistable Suction Cups},
-  author = {Andrew Nguyen and Mingyuan Li and Daniel Bruder},
-  year   = {2026}
-}</pre>
+      <pre><code>@inproceedings{nguyen2026highpayload,
+          title  = {A High-Payload Wall-Climbing Robot Using Passive Bistable Suction Cups},
+          author = {Andrew Nguyen and Mingyuan Li and Daniel Bruder},
+          year   = {2026}
+}</code></pre>
     </section>
   </main>
 
-  <footer>Layout inspired by modern robotics project pages. Built for local editing with plain HTML and CSS.</footer>
+  <footer>Website template modified from <a href="https://nerfies.github.io/">NeRFies</a>.</footer>
+
+  <script>
+    document.querySelectorAll('.media-video').forEach((video) => {
+      const updateOrientation = () => {
+        if (!video.videoWidth || !video.videoHeight) return;
+        video.classList.toggle('is-portrait', video.videoHeight > video.videoWidth);
+      };
+
+      video.addEventListener('loadedmetadata', updateOrientation);
+      updateOrientation();
+
+      const startValue = Number.parseFloat(video.dataset.start);
+      const endValue = Number.parseFloat(video.dataset.end);
+      if (!Number.isFinite(startValue) && !Number.isFinite(endValue)) return;
+
+      const setupSegment = () => {
+        const start = Math.max(0, Math.min(
+          Number.isFinite(startValue) ? startValue : 0,
+          video.duration
+        ));
+        const end = Math.min(
+          Number.isFinite(endValue) ? endValue : video.duration,
+          video.duration
+        );
+
+        if (!Number.isFinite(video.duration) || end <= start) return;
+
+        const enforceSegment = () => {
+          if (video.currentTime < start) {
+            video.currentTime = start;
+          } else if (video.currentTime >= end) {
+            video.currentTime = start;
+            if (!video.paused) video.play().catch(() => { });
+          }
+        };
+
+        video.currentTime = start;
+        video.addEventListener('timeupdate', enforceSegment);
+        video.addEventListener('seeking', enforceSegment);
+      };
+
+      if (video.readyState >= 1) {
+        setupSegment();
+      } else {
+        video.addEventListener('loadedmetadata', setupSegment, { once: true });
+      }
+    });
+  </script>
 </body>
+
 </html>
